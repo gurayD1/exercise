@@ -1,0 +1,60 @@
+/*
+						  1	
+						1	2	1	
+					1	2	4	2	1	
+				1	2	4	8	4	2	1	
+			1	2	4	8	16	8	4	2	1	
+		1	2	4	8	16	32	16	8	4	2	1	
+	1	2	4	8	16	32	64	32	16	8	4	2	1	
+1	2	4	8	16	32	64	128	64	32	16	8	4	2	1	
+*/
+
+
+
+public class exercise {
+
+	public static void main(String[] args) {
+		
+		// this method for tab space
+		printTab(7);
+		// create an integer to make a 7 times tab space
+		int x = 7;
+		// create a loop to display output
+		for (int n = 1; n <= 128; n *= 2) {
+			x--;
+			// this method to calculate numbers and display them
+			forLoop(n);
+			// this method for tab space
+			printTab(x);
+		}
+
+	}
+
+// this method is for tab space
+	public static void printTab(int n) {
+		if (n > 0) {
+			System.out.print("\t");
+			printTab(n - 1);
+		}
+
+	}
+
+	public static void forLoop(int b) {
+		// this for loop calculate and display left side of the output
+		for (int i = 1; i < b; i *= 2) {
+			System.out.print(i + "\t");
+
+		}
+		// this for loop calculate and display right side of the output
+		for (int j = b; j > 0; j /= 2) {
+
+			System.out.print(j + "\t");
+
+		}
+		// this is for new line
+
+		System.out.println();
+
+	}
+
+}
